@@ -180,7 +180,7 @@
 }
 
 .carousel-control-prev {
-    width: 90px;
+    width: 80px;
     height: 60px;
     position: absolute;
     top: 50%;
@@ -196,7 +196,7 @@
 }
 
 .carousel-control-next {
-    width: 90px;
+    width: 80px;
     height: 60px;
     position: absolute;
     top: 50%;
@@ -674,3 +674,411 @@
 }
 
 /*** Footer End ***/
+
+/* code from grok for css */
+
+/* General styles for the carousel item */
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+}
+
+/* Image styling */
+.carousel-item img.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure image covers container without distortion */
+    max-height: 100vh; /* Prevent image from exceeding viewport height */
+    background-color: black;
+    /* border: rgb(208, 10, 10) 1rem; */
+}
+
+/* Carousel caption container */
+.carousel-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Ensure caption doesn't overflow on small screens */
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Carousel content container */
+.carousel-content {
+    max-width: 1200px; /* Limit content width on large screens */
+    margin: 0 auto;
+}
+
+/* Typography */
+.carousel-content h6 {
+    font-size: 1.25rem; /* Base size for subheading */
+    margin-bottom: 0.5rem;
+}
+
+.carousel-content h1 {
+    font-size: 3rem; /* Base size for main heading */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.carousel-content p {
+    font-size: 1.125rem; /* Base size for paragraph */
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.carousel-content .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    white-space: nowrap;
+}
+
+/* Responsive adjustments using media queries */
+
+/* Extra small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+    .carousel-item img.img-fluid {
+        max-height: 50vh; /* Smaller image height for phones */
+    }
+
+    .carousel-caption {
+        bottom: 5%;
+        width: 95%;
+        /* align-items: center; */
+    }
+
+    .carousel-content h6 {
+        font-size: 0.875rem; /* Smaller subheading */
+    }
+
+    .carousel-content h1 {
+        font-size: 1.5rem; /* Smaller main heading */
+    }
+
+    .carousel-content p {
+        font-size: 0.875rem; /* Smaller paragraph */
+    }
+
+    .carousel-content .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .carousel-content .button {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        display: block; /* Stack buttons vertically */
+        margin: 0.35rem auto; /* Center buttons */
+    }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .carousel-item img.img-fluid {
+        max-height: 60vh;
+    }
+
+    .carousel-caption {
+        bottom: 8%;
+    }
+
+    .carousel-content h6 {
+        font-size: 1rem;
+    }
+
+    .carousel-content h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-content p {
+        font-size: 1rem;
+    }
+
+    .carousel-content .btn {
+        font-size: 0.875rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-item img.img-fluid {
+        max-height: 70vh;
+    }
+
+    .carousel-content h6 {
+        font-size: 1.125rem;
+    }
+
+    .carousel-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-content p {
+        font-size: 1.125rem;
+    }
+
+    .carousel-content .btn {
+        font-size: 0.875rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .carousel-item img.img-fluid {
+        max-height: 80vh; /* Larger image for desktops */
+    }
+
+    .carousel-content h6 {
+        font-size: 1.25rem;
+    }
+
+    .carousel-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .carousel-content p {
+        font-size: 1.25rem;
+    }
+
+    .carousel-content .btn {
+        font-size: 1rem;
+        padding: 0.75rem 2rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .carousel-content h1 {
+        font-size: 4rem;
+    }
+
+    .carousel-content .btn {
+        padding: 0.875rem 2.5rem;
+    }
+}
+
+/* Enhanced Carousel Styling */
+.carousel-item {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-item img.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 0;
+    z-index: 2;
+}
+
+.carousel-content {
+    width: 100%;
+}
+
+/* Typography scaling */
+.carousel-content h6 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.carousel-content h1 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.carousel-content p {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button styling */
+.carousel-content .btn {
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+}
+
+.carousel-content-btn1:hover,
+.carousel-content-btn2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation controls */
+/* .carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background: var(--bs-secondary);
+} */
+
+/* Indicators */
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    background-color: var(--bs-primary);
+    opacity: 0.5;
+}
+
+.carousel-indicators li.active {
+    opacity: 1;
+    background-color: var(--bs-secondary);
+}
+
+/* Responsive breakpoints */
+/* Mobile devices (less than 576px) */
+@media (max-width: 575.98px) {
+    .carousel-item::after {
+        background: rgba(0, 0, 0, 0.7); /* Darker overlay for better readability */
+    }
+    
+    .carousel-caption {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .carousel-content h6 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .carousel-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .carousel-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .carousel-content .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+        margin: 0.25rem;
+        display: inline-block;
+        min-width: 120px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        /* display: none; */
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Small devices (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .carousel-content h6 {
+        font-size: 1rem;
+    }
+    
+    .carousel-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .carousel-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .carousel-content .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Medium devices (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-content h6 {
+        font-size: 1.1rem;
+    }
+    
+    .carousel-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .carousel-content p {
+        font-size: 1.1rem;
+    }
+    
+    .carousel-content .btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        /* display: none; */
+        width: 50px;
+        height: 40px;
+    }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+    .carousel-content h6 {
+        font-size: 1.25rem;
+    }
+    
+    .carousel-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .carousel-content p {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-content .btn {
+        font-size: 1.1rem;
+        padding: 0.8rem 2.5rem;
+    }
+}
+
+
+/* css for fact start */
+
