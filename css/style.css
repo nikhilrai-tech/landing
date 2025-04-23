@@ -1082,3 +1082,91 @@
 
 /* css for fact start */
 
+/* .container-fluid {
+    padding: 3rem 1rem;
+} */
+
+.container-fact {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row-fact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.col-lg-3 {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.counter:hover {
+    transform: translateY(-5px);
+}
+
+.counter-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0d6efd;
+    margin: 0;
+}
+
+.text-white {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .col-lg-3 {
+        /* min-width: 100%; */
+        width: 20px;
+        height: auto;
+    }
+
+    .row-fact {
+        gap: 1rem;
+        min-height: 120px; /* Adjust minimum height for smaller screens */
+    }
+
+    .counter-value {
+        font-size: 2rem;
+    }
+
+    .text-white {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        padding: 0rem 0.5rem;
+    }
+
+    .counter {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .counter-value {
+        font-size: 1.8rem;
+    }
+}
